@@ -35,3 +35,7 @@ The code in this repository is the **exact, finalized code** that produced this 
 ### EfficientNet Experiment
 
 The code for running the EfficientNet model is included in **Block 3** (commented out), demonstrating the complete methodology planned in the research paper.
+
+###Research Paper
+
+NOTE: The results shown in the research paper are not the Actual results. That Research Paper is just a proposal.
