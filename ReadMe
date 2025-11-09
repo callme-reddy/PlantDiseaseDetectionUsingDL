@@ -1,0 +1,37 @@
+# Crop Disease Detection using Deep Learning
+
+This project is a practical implementation of the research paper "Crop Disease Detection using Deep Learning," submitted for Deep Learning.
+
+## Dataset
+
+This project uses the public PlantVillage dataset, which can be downloaded here:
+https://www.kaggle.com/datasets/akshaydattatraykhare/plantvillage-dataset
+
+## How to Run
+
+This project is designed to be run in Google Colab. The code is structured into sequential blocks:
+
+1.  **Block 1:** Downloads the dataset using the `kagglehub` library.
+2.  **Block 2:** Creates the `tf.data` pipelines for efficient, no-RAM-crash training (80:10:10 split).
+3.  **Block 3:** Builds, trains, and evaluates the model.
+4.  **Block 4:** Generates the final classification report and confusion matrix.
+
+---
+
+## Project Status & Results
+
+This project successfully implements the methodology from the research paper. This involved solving significant technical challenges, including:
+* Migrating from manual data loading to an efficient `tf.data` pipeline to prevent RAM crashes on the large 54,000+ image dataset.
+* Implementing a two-step fine-tuning process (warm-up and fine-tuning) to achieve high accuracy.
+
+### ResNet50 Experiment
+
+The ResNet50 experiment was run successfully.
+
+During a complete 30-epoch training session, the model achieved a **final test accuracy of 98.5%**. This confirmed the effectiveness of the fine-tuning strategy, with accuracy jumping from ~32% (frozen model) to over 98% (unfrozen model).
+
+The code in this repository is the **exact, finalized code** that produced this 98.5% result.
+
+### EfficientNet Experiment
+
+The code for running the EfficientNet model is included in **Block 3** (commented out), demonstrating the complete methodology planned in the research paper.
